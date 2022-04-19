@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>YCU-TIPS home</title>
+        <meta name="description" content="横市生の悩み雑談えとせとらを解決">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="/static/style.css" >
+        <link rel="icon" type="image/png" href="/static/favicon.png">
+    </head>
+    <body>
+        <header class="page-header wrapper">    
+            <nav class="menupop">
+            <ul class="menubar idea">
+                <li class="menu"><a href="/home/thread/new/">スレッド作成</a></li>
+                <li class="menu"><a href="/">ログアウト</a></li>
+            </ul>
+            </nav>
+            <body>
+                {% if user.id %}
+                <p>ログインしました</p>
+                <p>ようこそ、{{ user.username }}さん</p>
+                {% endif %}
+            <div class="thread">
+                {% block thread %}
+                {% endblock %}
+            </div>
+        </header>
+        <footer class="er"> 
+            <h1 class="foot">@nohakai2001 django-python</h1>
+        </footer>
+    </body>
+</html>

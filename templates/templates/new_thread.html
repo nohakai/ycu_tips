@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>スレッド作成</title>
+        <meta name="description" content="横市生の悩み雑談えとせとらを解決">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="/static/style.css" >
+        <link rel="icon" type="image/png" href="/static/favicon.png">
+    </head>
+    <body>
+        <h1 class="tino">スレッド作成</h1>
+        <form method="POST" novalidate >
+            {% csrf_token %}
+            <label>ユーザー名</label>
+            {{ form.user }}
+            <label>スレッド名</label>
+            {{ form.title }}
+            <button type="submit"><span>クリックして作成</span></button>
+        </form>
+        <p>{{ message }}</p>
+    </body>
+    <footer class="er"> 
+        <h1 class="foot">@nohakai2001 django-python</h1>
+    </footer>
+<html>

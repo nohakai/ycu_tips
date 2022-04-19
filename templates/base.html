@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>YCU-TIPS</title>
+        <meta name="description" content="横市生の悩み雑談えとせとらを解決">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="/static/style.css" >
+        <link rel="icon" type="image/png" href="/static/favicon.png">
+    </head>
+    <body>
+        <header class="page-header wrapper">
+            {% block top %}
+            {% endblock top %}      
+            <nav>
+            <ul class="menubar">
+                <li class="menu"><a href="/rule/">利用する前に</a></li>
+                <li class="menu"><a href="/create/">会員登録</a></li>
+                <li class="menu"><a href="/login/">ログイン</a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="title">横市生の悩み雑談えとせとらを解決</h1>
+            <img src=static/app_name.png alt="ycu_tips">
+        </main>
+        <footer class="er"> 
+            <h1 class="foot">@nohakai2001 django-python</h1>
+        </footer>
+    </body>
+</html>

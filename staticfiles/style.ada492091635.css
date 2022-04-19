@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial;
+    line-height: 1.7;
+    background-color: rgb(193, 232, 219);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.logo {
+    margin-left: 16px;
+    margin-top: 20px;
+}
+
+.logo a {
+    color: rgb(17, 38, 4);
+}
+
+.menubar {  
+    font-size: 1.25rem;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.menubar li {
+    margin-right: 36px;
+}
+
+
+.menu a {
+    color: rgb(17, 38, 4);
+}
+
+.menu a :hover {
+    opacity: 0.7;
+}
+
+.menubar  {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1%;
+}
+
+
+.er {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    font-size: 0.5rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2.5rem;
+}
+
+.title {
+    color: rgb(17, 38, 4);
+}
+
+.foot {
+    color: rgb(17, 38, 4);
+}
+
+
+.nohakai {
+    padding-top: 20px;
+}
+
+
+.kaito {
+    padding: 20px;
+    padding-right: 30px;
+    font-weight: bolder;
+}
+
+.tino  {
+    margin-left: 60px;
+    margin-top: 70px;
+}
+
+form {
+    margin: 7rem 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+button {
+    margin-top: 20px;
+}
+
+span {
+    border-bottom: solid;
+    border-color: azure;
+}
+
+.important {
+    margin-left: 60px;
+}
+
+.rulemenu {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+h2 {
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+.last {
+    border-bottom: solid;
+    border-color: azure;
+}
+
+.kokoa {
+    padding-top: 30px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+
+td {
+    font-size: 18px;
+}
+
+
+img {
+    margin-left: 35%;
+    margin-top: -20%;
+}
+
+.comment-list {
+    margin-top: 1.5rem;
+    margin-left: 14rem;
+}
+
+.container {
+    background-color: aliceblue;
+}
+
+
+#comment-form {
+    background-color: azure;
+}
+
+
+.field {
+    background-color: white;
+    border: solid;
+    border-color:rgb(193, 232, 219);
+}
+
+
+
+.comment {
+    margin-top: 1.5rem;
+    margin-left: 15rem;
+
+}

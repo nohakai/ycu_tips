@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block thread %}
+<h1>{{ message }}</h1>
+<table class="nohakai">
+    <tbody>
+        {% for topic in data %}
+        <tr class="nohakai"><td class="kaito">{{ topic.title }}</td><td>作成ユーザー:</td><td>{{ topic.user }}</td><td><a href="detail/{{ topic.id }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;スレッドへ</a></td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ログイン</title>
+        <meta name="description" content="横市生の悩み雑談えとせとらを解決">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="/static/style.css" >
+        <link rel="icon" type="image/png" href="/static/favicon.png">
+    </head>
+    <body>
+        <h1 class="tino">ログイン</h1>
+        {% if form.errors %}
+        <p>ユーザー名、パスワードが一致しません</p>
+        {% endif %}
+        <form method="POST" action="{% url 'tips:login' %}">
+            {% csrf_token %}
+            <label>ユーザー名</label>
+            {{ form.username }}
+            {{ form.username.errors }}
+            <label>パスワード</label>
+            {{ form.password }}
+            {{ form.password.errors }}
+            <button type = "submit"><span>ログイン</span></button>
+        </form>
+    </body>
+    <footer class="er"> 
+        <h1 class="foot">@nohakai2001 django-python</h1>
+    </footer>
+<html>

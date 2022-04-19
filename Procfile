@@ -1,0 +1,1 @@
+web: gunicorn ycu_tips.wsgi

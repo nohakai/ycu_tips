@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>YCU-TIPS thread</title>
+        <meta name="description" content="横市生の悩み雑談えとせとらを解決">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="/static/style.css" >
+        <link rel="icon" type="image/png" href="/static/favicon.png">
+    </head>
+    <body>
+        <header class="page-header wrapper">    
+            <nav class="menupop">
+            <ul class="menubar idea">
+                <li class="menu"><a href="/home/thread/list/">スレッド一覧に戻る</a></li>
+            </ul>
+            </nav>
+            <body>
+                {% if user.id %}
+                <p>ログインしました</p>
+                <p>ようこそ、{{ user.username }}さん</p>
+                {% endif %}
+            <div class="thread kokoa">
+                <tr class="kokoa"><td class="syaro">{{ thread.title }}</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="syaro">{{ thread.user }}</td></tr>
+            </div>
+        </header>
+        <main>
+            {% for comment in comments %}
+            <div class="comment-list">
+                <div class="border-bottom">{{ comment.name }}_____{{ comment.created_at }}</div>
+                <div class='mt-2'>{{ comment.text | linebreaks | urlize }}</div>
+            </div>
+            {% empty %}
+            <p>-</p>
+            {% endfor %}
+        </main>
+        <section class="comment">
+            <a href='create/'>スレッドリプライする</a>
+        </section>
+        <footer class="er"> 
+            <h1 class="foot">@nohakai2001 django-python</h1>
+        </footer>
+    </body>
+</html>
