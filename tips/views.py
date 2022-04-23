@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.views.generic import CreateView
-from . forms import UserCreateForm
 from django.views import View
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
@@ -22,7 +21,7 @@ class RuleView(generic.TemplateView):
 
 
 #アカウント作成ビュー
-class Create_account(CreateView):
+class Create_account(generic.CreateView):
     def post(self, request,*args, **kwargs):
         form = UserCreateForm(data=request.POST)
         if form.is_valid():
